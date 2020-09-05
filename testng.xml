@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="WeDoQASuite" thread-count="3" parallel="tests">
+    <listeners>
+        <listener class-name="helpers.TestListener"/>
+    </listeners>
+    <test name="Chrome Tests">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="tests.WeDoQATests"/>
+        </classes>
+    </test>
+    <test name="Firefox Tests">
+        <parameter name="browser" value="Firefox"/>
+        <classes>
+            <class name="tests.WeDoQATests"/>
+        </classes>
+    </test>
+    <test name="Edge Tests">
+        <parameter name="browser" value="Edge"/>
+        <classes>
+            <class name="tests.WeDoQATests"/>
+        </classes>
+    </test>
+</suite>
